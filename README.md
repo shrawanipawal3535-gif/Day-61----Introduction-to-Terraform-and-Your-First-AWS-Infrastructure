@@ -29,8 +29,6 @@ Before touching the terminal, research and write short notes on:
 - Helps teams collaborate using Git
 - Reduces manual errors
 
-
-  
 2. What problems does IaC solve compared to manually creating resources in the AWS console?
 
      ----- Manual AWS work has many issues:
@@ -46,7 +44,6 @@ Before touching the terminal, research and write short notes on:
 - Consistency → same result every time
 -  Version control → track changes in Git
 -  Easy scaling → create multiple resources quickly
-
 
 3. How is Terraform different from AWS CloudFormation, Ansible, and Pulumi?
 
@@ -69,7 +66,6 @@ Before touching the terminal, research and write short notes on:
 - Uses programming languages (Python, JS)
 - More flexible but needs coding skills
 - Terraform is easier for beginners
-
 
 4. What does it mean that Terraform is "declarative" and "cloud-agnostic"?
 
@@ -103,6 +99,8 @@ Cloud-agnostic means:
 
    aws sts get-caller-identity
 
+   <img width="1026" height="368" alt="Image" src="https://github.com/user-attachments/assets/5c63fa71-d11c-4113-a8b8-2acafe383b9a" />
+
 # Task 3: Your First Terraform Config -- Create an S3 Bucket
 
 Create a project directory and write your first Terraform config:
@@ -121,7 +119,13 @@ terraform init      # Download the AWS provider
 terraform plan      # Preview what will be created
 terraform apply     # Create the bucket (type 'yes' to confirm)
 
+<img width="744" height="395" alt="Image" src="https://github.com/user-attachments/assets/2c30bc4e-4540-4487-be26-c8f881781579" />
 
+<img width="1007" height="901" alt="Image" src="https://github.com/user-attachments/assets/2538f834-2870-4b3f-b15a-c0db53831ea2" />
+
+<img width="1037" height="901" alt="Image" src="https://github.com/user-attachments/assets/200204b7-34e5-4c8f-8de3-d257a6d74310" />
+
+<img width="1094" height="281" alt="Image" src="https://github.com/user-attachments/assets/41a6e92b-0f06-4284-a365-bef7927e6b44" />
 
 # Task 4: Add an EC2 Instance
 
@@ -135,6 +139,10 @@ Run:
 
 terraform plan      # You should see 1 resource to add (bucket already exists)
 terraform apply
+
+<img width="773" height="977" alt="Image" src="https://github.com/user-attachments/assets/cf8b9e11-3a19-471d-baa9-de520ff069dc" />
+
+<img width="647" height="145" alt="Image" src="https://github.com/user-attachments/assets/02a4004e-88f5-4cb5-8595-2121befb29b6" />
 
 # Task 5: Understand the State File
 
@@ -170,7 +178,6 @@ It stores:
   3. Terraform may create/delete wrongly
   4. JSON errors can corrupt file
 
-
 - Why should the state file not be committed to Git?
  
 Because it may contain:
@@ -184,6 +191,12 @@ Problems:
 2. Team conflicts
 3.  Corruption if multiple people edit
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/3ef2667e-6b9d-4458-abd2-0c14e8381199" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/17e94206-3be6-4ff8-a7fe-0b7e4cd65fb3" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/49db5a22-30e2-42fc-a58b-def902172606" />
+
 # Task 6: Modify, Plan, and Destroy
 
 1. Change the EC2 instance tag from "TerraWeek-Day1" to "TerraWeek-Modified" in your main.tf
@@ -195,4 +208,10 @@ Problems:
 5. Finally, destroy everything:
    
   terraform destroy
+
+<img width="1147" height="515" alt="Image" src="https://github.com/user-attachments/assets/e1981a0f-36a4-4fb6-934d-496ba2140006" />
+
+<img width="1122" height="691" alt="Image" src="https://github.com/user-attachments/assets/39277242-1830-42b2-a5b6-96a6b1dbfe93" />
+
+<img width="845" height="192" alt="Image" src="https://github.com/user-attachments/assets/fe921f45-7a00-4188-8539-53b0f62c0c64" />
 
